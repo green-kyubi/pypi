@@ -1,0 +1,69 @@
+{% load static %}
+{% load template_api_settings %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>UniVert</title>
+
+      {% block stylesheets %}
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <!-- Artea CSS -->
+        <link rel="stylesheet" href="{% static 'singularity/css/master.css' %}">
+        <link rel="stylesheet" href="{% static 'singularity/css/singularity.css' %}">
+        <link rel="stylesheet" href="{% static 'singularity/css/univers.css' %}">
+      {% endblock stylesheets %}
+
+      {% block js_head_modules %}
+        {% block FontAwesome %}
+          <!-- Font Awesome -->
+          <script src="https://kit.fontawesome.com/569f6a16fb.js" crossorigin="anonymous"></script>
+        {% endblock FontAwesome %}
+        {% block JQuery %}
+          <!-- JQuery -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        {% endblock JQuery %}
+      {% endblock js_head_modules %}
+
+      {% block singularity %}
+        <link rel="stylesheet" href="{% static "singularity/css/univers_menu.css" %}">
+      {% endblock singularity %}
+
+
+
+  </head>
+
+  <body id="singularity_body">
+
+    {% block navbar %}
+      {% include "singularity/navbar.html" %}
+    {% endblock navbar %}
+
+    {% block header %}
+      <nav class="singularity-header">
+        <img class="background-img" src="https://source.unsplash.com/collection/9639950/777x333/" alt="">
+        <div class="foreground text-center">
+          {% block singularity_header_content %}{% endblock singularity_header_content %}
+        </div>
+      </nav>
+    {% endblock header %}
+
+    {% block content %}{% endblock content %}
+
+
+    {% block js_foot_modules %}
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    {% endblock js_foot_modules %}
+
+    {% block javascripts %}{% endblock javascripts %}
+
+  </body>
+</html>

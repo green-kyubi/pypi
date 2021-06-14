@@ -1,0 +1,37 @@
+<nav id="singularity_universe_menu" class="menu-space-digital">
+  <img class="menu-badge" src="https://source.unsplash.com/collection/4838728/222x222/" alt="Badge">
+  <div class="menu-content">
+    <div class="univers-nav">
+      <h2>Univers Promordial</h2>
+      <div class="link-list">
+        {% for universe in universes %}
+          <a href="/" class="btn text-capitalize btn-primary btn-space ms-2">{{ universe }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="galaxy-nav">
+      <h2>Galaxies Naîssantes</h2>
+      <div class="link-list">
+        {% for galaxy in galaxies %}
+          <a href="{% url galaxy.url_name %}" class="btn text-capitalize btn-primary btn-space">{{ galaxy.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="solaris-nav">
+      <h2>Systèmes Solaris Primaires</h2>
+      <div class="link-list">
+        {% for solar in solaris %}
+          <a href="{% url solar.url_name id=solar.id %}" class="btn text-capitalize btn-primary btn-space">{{ solar }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="terra-nav">
+      <h2>Proto-Planètes</h2>
+      <div class="link-list">
+        {% for terra in terrae %}
+          <a href="{{ terra.url }}" class="btn text-capitalize btn-primary btn-space">{{ terra }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</nav>
