@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: artea-singularity-gsw-ww
+Version: 0.7.11
+Summary: Singularité Artistique
+Home-page: https://github.com/green-kyubi/pypi/artea-singularity/
+Author: Artea
+Author-email: arthur.neyer@protonmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/green-kyubi/pypa/artea-singularity/issues
+Description: # Singularity
+        
+        Ce module django est la base de chacun de mes projets web.
+        
+        ## Installation
+        (ça arrive t'inquiète)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
